@@ -1,0 +1,37 @@
+<!-- Side Bar -->
+
+<div class="large-4 small-12 columns">
+
+  <img {{bind-attr src="image"}}>
+
+  <div class="hide-for-small panel">
+    <h3>{{name}}</h3>
+    <h5 class="subheader">{{description}}</h5>
+  </div>
+
+  <a href="#">
+    <div class="panel callout radius">
+      <h6>99  items in your cart</h6>
+    </div>
+  </a>
+
+</div>
+
+<!-- End Side Bar -->
+
+<!-- Thumbnails -->
+<div class="large-8 columns">
+  <div class="row">
+    {{#each product in products}}
+      <div class="large-4 small-6 columns">
+        <img {{bind-attr src=product.image}}>
+
+        <div class="panel">
+          <h5>{{product.title}}</h5>
+          <h6 class="subheader">${{product.finalPrice}}</h6>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
+  <!-- End Thumbnails -->

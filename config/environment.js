@@ -1,5 +1,3 @@
-var fixtures = require('./fixtures');
-
 module.exports = function(environment) {
   var ENV = {
     rootURL: '/',
@@ -9,7 +7,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    ENV['FIXTURES'] = fixtures;
+
   }
 
   if (environment === 'production') {

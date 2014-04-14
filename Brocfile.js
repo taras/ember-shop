@@ -3,6 +3,8 @@
 var uglifyJavaScript = require('broccoli-uglify-js');
 var replace = require('broccoli-replace');
 var compileES6 = require('broccoli-es6-concatenator');
+var transpileES6 = require('broccoli-es6-module-transpiler');
+//var concatFiles = require('broccoli-concat');
 var validateES6 = require('broccoli-es6-import-validate');
 var pickFiles = require('broccoli-static-compiler');
 var mergeTrees = require('broccoli-merge-trees');
@@ -57,10 +59,14 @@ module.exports = function (broccoli) {
     'jquery.js',
     'handlebars.js',
     'ember.js',
+    'route-recognizer/dist/route-recognizer.amd.js',
     'ic-ajax/dist/named-amd/main.js',
     'ember-data.js',
     'ember-resolver.js',
-    'ember-shim.js'
+    'ember-shim.js',
+    'modernizr.js',
+    'foundation.js',
+    'foundation-shim.js'
   ];
 
   var applicationJs = preprocessJs(appAndDependencies, '/', prefix);
@@ -126,6 +132,18 @@ module.exports = function (broccoli) {
     });
 
     tests = preprocessTemplates(tests);
+
+//    var fixtures = pickFiles('fixtures', {
+//      srcDir: '/',
+//      destDir: '/',
+//      files: ['**/*.js']
+//    });
+//
+//    var transpiledFixtures = transpileES6(fixtures, {moduleName: 'fixtures'});
+//    var concatedFixtures = concatFiles(transpiledFixtures, {
+//      inputFiles: ['**/js'],
+//      outputFile: '/assets/fixtures.js'
+//    });
 
     sourceTrees = [tests, 'vendor'].concat(broccoli.bowerTrees());
     appAndDependencies = mergeTrees(sourceTrees, { overwrite: true });

@@ -13,10 +13,4 @@ var App = Ember.Application.extend({
   Resolver: Resolver
 });
 
-if (ENV.FIXTURES) {
-  Em.keys(ENV.FIXTURES).forEach(function(url){
-    defineFixture(url, ENV.FIXTURES[url]);
-  });
-}
-
 export default App;
