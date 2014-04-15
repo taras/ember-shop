@@ -6,6 +6,6 @@ export default DS.Model.extend({
   category: DS.hasMany('category'),
   price: DS.attr('number'),
   publishDate: DS.attr('date'),
-  isDiscounted: DS.attr('bool'),
+  isDiscounted: DS.attr('boolean'),
   discount: DS.attr('number')
 });

@@ -1,8 +1,10 @@
-import category from './category/labore-est';
 import {successful} from './helpers';
 
-export default function(request, params) {
+export default function(params) {
   var payload = {};
+
+  // hack for https://github.com/square/es6-module-transpiler/issues/102
+  var category = require('fixtures/category/labore-est').category;
 
   // /products?featured
   if (params.featured) {

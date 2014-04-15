@@ -8,7 +8,7 @@
     "ember": "1.5.0",
     "ember-data": "1.0.0-beta.7",
     "ember-resolver": "git://github.com/stefanpenner/ember-jj-abrams-resolver.git#master",
-    "ic-ajax": "git+git@github.com:taras/ic-ajax.git#16b309704652a4ca36ef2e386f3865992dfb9936",
+    "ic-ajax": "git+git@github.com:taras/ic-ajax.git#1bb36963678259d62255eae639535f34da827a69",
     "loader": "git://github.com/stefanpenner/loader.js#1.0.0",
     "ember-cli-shims": "git://github.com/stefanpenner/ember-cli-shims.git#0.0.1",
     "ember-load-initializers": "git://github.com/stefanpenner/ember-load-initializers.git#0.0.1"

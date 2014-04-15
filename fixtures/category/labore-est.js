@@ -1,7 +1,16 @@
 import {successful} from '../helpers';
 import {firstPageProducts, secondPageProducts} from '../products';
 
-export default function(request, params) {
+export var category = {
+  "id": 0,
+  "name": "labore est",
+  "slug": "labore-est",
+  "description": "Reprehenderit non nostrud Lorem ex cupidatat. Irure sit ullamco laboris sit velit Lorem reprehenderit eu irure aliquip. Esse aute excepteur enim incididunt dolor magna elit. Irure amet et reprehenderit sit do veniam.\r\n",
+  "image": "http://placehold.it/500x500&text=labore est",
+  "products": [ 1, 2, 3, 4, 5, 6 ]
+};
+
+export default function(params) {
   var payload = {};
 
   payload.category = category;
@@ -16,11 +25,3 @@ export default function(request, params) {
   return successful(payload);
 }
 
-export var category = {
-  "id": 0,
-  "name": "labore est",
-  "slug": "labore-est",
-  "description": "Reprehenderit non nostrud Lorem ex cupidatat. Irure sit ullamco laboris sit velit Lorem reprehenderit eu irure aliquip. Esse aute excepteur enim incididunt dolor magna elit. Irure amet et reprehenderit sit do veniam.\r\n",
-  "image": "http://placehold.it/500x500&text=labore est",
-  "products": [ 1, 2, 3, 4, 5, 6 ]
-};

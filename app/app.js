@@ -13,4 +13,6 @@ var App = Ember.Application.extend({
   Resolver: Resolver
 });
 
+loadFixtures('fixtures');
+
 export default App;
