@@ -4,8 +4,8 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('category', {path: ':category'}, function(){
-    this.route('product', {path: ':product'});
+  this.resource('category', {path: ':category_slug'}, function(){
+    this.route('product', {path: ':product_slug'});
   });
 
   this.resource('cart', function(){

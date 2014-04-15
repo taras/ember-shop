@@ -1,13 +1,13 @@
-import {successful} from '../helpers';
+import {success} from '../helpers';
 import {firstPageProducts, secondPageProducts} from '../products';
 
 export var category = {
-  "id": 0,
+  "id": 1,
   "name": "labore est",
   "slug": "labore-est",
   "description": "Reprehenderit non nostrud Lorem ex cupidatat. Irure sit ullamco laboris sit velit Lorem reprehenderit eu irure aliquip. Esse aute excepteur enim incididunt dolor magna elit. Irure amet et reprehenderit sit do veniam.\r\n",
   "image": "http://placehold.it/500x500&text=labore est",
-  "products": [ 1, 2, 3, 4, 5, 6 ]
+  "products": []
 };
 
 export default function(params) {
@@ -22,6 +22,6 @@ export default function(params) {
     total: 12
   };
 
-  return successful(payload);
+  return success(payload);
 }
 

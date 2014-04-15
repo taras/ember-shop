@@ -1,5 +1,5 @@
 export default Ember.Route.extend({
-  model: function(params) {
-    return this.store.findQuery('category', params);
+  model: function() {
+    return this.modelFor('category');
   }
 });

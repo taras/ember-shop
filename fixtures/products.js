@@ -1,4 +1,4 @@
-import {successful} from './helpers';
+import {success} from './helpers';
 
 export default function(params) {
   var payload = {};
@@ -10,7 +10,7 @@ export default function(params) {
   if (params.featured) {
     payload.products = products.filterBy('isFeatured');
     payload.categories = [ category ];
-    return successful(payload);
+    return success(payload);
   }
 
   if (params.page === 2) {
@@ -23,7 +23,7 @@ export default function(params) {
 
   payload.categories = [ category ];
 
-  return successful(payload);
+  return success(payload);
 };
 
 export var products = [
@@ -36,7 +36,7 @@ export var products = [
     "publishDate": "Tue Mar 30 1971 09:39:42 GMT-0500 (EDT)",
     "price": 42,
     "category": [
-      0
+      1
     ],
     "isDiscounted": false,
     "isFeatured": false,
@@ -51,7 +51,7 @@ export var products = [
     "publishDate": "Fri Apr 03 1970 17:42:42 GMT-0500 (EDT)",
     "price": 70,
     "category": [
-      0
+      1
     ],
     "isDiscounted": true,
     "isFeatured": false,
@@ -66,7 +66,7 @@ export var products = [
     "publishDate": "Wed Sep 27 1978 23:04:58 GMT-0400 (EDT)",
     "price": 41,
     "category": [
-      0
+      1
     ],
     "isDiscounted": true,
     "isFeatured": true,
@@ -81,7 +81,7 @@ export var products = [
     "publishDate": "Sun Nov 17 2013 23:38:16 GMT-0500 (EST)",
     "price": 41,
     "category": [
-      0
+      1
     ],
     "isDiscounted": false,
     "isFeatured": false,
@@ -96,7 +96,7 @@ export var products = [
     "publishDate": "Fri Feb 19 1999 04:12:05 GMT-0500 (EST)",
     "price": 6,
     "category": [
-      0
+      1
     ],
     "isDiscounted": true,
     "isFeatured": false,
@@ -111,7 +111,7 @@ export var products = [
     "publishDate": "Mon May 29 2000 16:00:40 GMT-0400 (EDT)",
     "price": 76,
     "category": [
-      0
+      1
     ],
     "isDiscounted": false,
     "isFeatured": false,
@@ -126,7 +126,7 @@ export var products = [
     "publishDate": "Tue Oct 03 1978 01:16:08 GMT-0400 (EDT)",
     "price": 21,
     "category": [
-      0
+      1
     ],
     "isDiscounted": true,
     "isFeatured": true,
@@ -141,7 +141,7 @@ export var products = [
     "publishDate": "Tue Jul 31 1973 10:26:49 GMT-0400 (EDT)",
     "price": 11,
     "category": [
-      0
+      1
     ],
     "isDiscounted": false,
     "isFeatured": false,
@@ -156,7 +156,7 @@ export var products = [
     "publishDate": "Tue Oct 11 2005 10:00:50 GMT-0400 (EDT)",
     "price": 51,
     "category": [
-      0
+      1
     ],
     "isDiscounted": true,
     "isFeatured": true,
@@ -171,7 +171,7 @@ export var products = [
     "publishDate": "Mon Dec 10 1979 01:19:55 GMT-0500 (EST)",
     "price": 39,
     "category": [
-      0
+      1
     ],
     "isDiscounted": false,
     "isFeatured": false,
@@ -186,7 +186,7 @@ export var products = [
     "publishDate": "Sun May 10 1998 14:01:13 GMT-0400 (EDT)",
     "price": 45,
     "category": [
-      0
+      1
     ],
     "isDiscounted": false,
     "isFeatured": false,
@@ -201,7 +201,7 @@ export var products = [
     "publishDate": "Wed Sep 21 1977 15:31:36 GMT-0400 (EDT)",
     "price": 76,
     "category": [
-      0
+      1
     ],
     "isDiscounted": false,
     "isFeatured": false,
