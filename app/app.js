@@ -1,5 +1,5 @@
 import Resolver from 'ember/resolver';
-import {defineFixture} from 'ic-ajax';
+import {loadFixtures} from 'ic-ajax';
 
 Ember.MODEL_FACTORY_INJECTIONS = true;
 

@@ -24,9 +24,6 @@ export default function(request, params) {
   return successful(payload);
 };
 
-export var firstPageProducts = products.slice(0, 6);
-export var secondPageProducts = products.slice(6);
-
 export var products = [
   {
     "id": 1,
@@ -209,3 +206,6 @@ export var products = [
     "discount": null
   }
 ];
+
+export var firstPageProducts = products.slice(0, 6);
+export var secondPageProducts = products.slice(6);

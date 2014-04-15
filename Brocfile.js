@@ -56,7 +56,7 @@ var legacyFilesToAppend = [
   'jquery.js',
   'handlebars.js',
   'ember.js',
-  'ic-ajax/dist/named-amd/main.js',
+  'ic-ajax/dist/ic-ajax.amd.js',
   'ember-data.js',
   'app-shims.js',
   'ember-resolver.js',
@@ -139,6 +139,12 @@ if (env !== 'production') {
       'ember': ['default'],
       'ember/resolver': ['default'],
       'ember/load-initializers': ['default'],
+      'ic-ajax': [
+        'default',
+        'defineFixture',
+        'lookupFixture',
+        'loadFixtures'
+      ],
       'ember-qunit': [
         'globalize',
         'moduleFor',
@@ -176,10 +182,14 @@ if (env !== 'production') {
     outputFile: '/assets/tests.js'
   });
 
-  fixturesJs = preprocessJs('fixtures', '/', 'fixtures');
+  var fixtures = pickFiles('fixtures', {
+    srcDir: '/',
+    files: ['**/*.js'],
+    destDir: '/fixtures'
+  });
 
-  fixturesJs = compileES6(fixturesJs, {
-    loaderFile: '_loader.js',
+  fixturesJs = compileES6(fixtures, {
+    loaderFile: 'fixtures/_loader.js',
     ignoreModules: [],
     inputFiles: ['**/*.js'],
     legacyFilesToAppend: [],
