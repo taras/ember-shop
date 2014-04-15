@@ -8,11 +8,9 @@
     "ember": "1.5.0",
     "ember-data": "1.0.0-beta.7",
     "ember-resolver": "git://github.com/stefanpenner/ember-jj-abrams-resolver.git#master",
-    "ic-ajax": "git+https://github.com/taras/ic-ajax",
-    "route-recognizer": "git+https://github.com/tildeio/route-recognizer#fe8d680a6356d8c267cdc49846751e9a5b80945d",
-    "loader": "git://github.com/stefanpenner/loader.js#1.0.0"
-  },
-  "resolutions": {
-    "jquery": ">= 2.1.0"
+    "ic-ajax": "~1.x",
+    "loader": "git://github.com/stefanpenner/loader.js#1.0.0",
+    "ember-cli-shims": "git://github.com/stefanpenner/ember-cli-shims.git#0.0.1",
+    "ember-load-initializers": "git://github.com/stefanpenner/ember-load-initializers.git#0.0.1"
   }
 }
